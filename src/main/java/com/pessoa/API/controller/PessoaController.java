@@ -26,7 +26,7 @@ public class PessoaController {
         return pessoaRepository.save(pessoa);
     }
 
-    @PutMapping
+    @PutMapping //editar uma pessoa
     public Pessoa editar(Pessoa pessoa) {
         return null;
     }
