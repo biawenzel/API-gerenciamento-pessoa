@@ -1,6 +1,8 @@
 package com.pessoa.API.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -9,8 +11,6 @@ import java.util.Date;
 public class Pessoa {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
     @Column(nullable = false)
     private String nome;
     private String dataNascimento;
@@ -18,15 +18,6 @@ public class Pessoa {
     private int numeroEndereco;
     private String cidade;
     private int cep;
-
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getNome() {
         return nome;
@@ -75,6 +66,5 @@ public class Pessoa {
     public void setCep(int cep) {
         this.cep = cep;
     }
-
 }
 
