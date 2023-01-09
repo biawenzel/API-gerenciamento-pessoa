@@ -45,4 +45,13 @@ public class PessoaController {
         }
         return pessoaRepository.findById(id);
     }
+
+    @GetMapping("/endereco/{id}")
+    public Pessoa listarEndereco(@PathVariable long id) {
+        var pesquisaPessoa = pessoaRepository.findById(id);
+        if (pesquisaPessoa == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+        return null; //pessoaRepository.findById(id).getLogradouro();
+    }
 }

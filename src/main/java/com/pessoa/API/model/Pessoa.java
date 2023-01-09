@@ -2,9 +2,6 @@ package com.pessoa.API.model;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
-import java.util.Date;
-
 @Entity
 public class Pessoa {
 
@@ -19,6 +16,18 @@ public class Pessoa {
     private String cidade;
     private int cep;
 
+    public Pessoa() {
+    }
+
+    public Pessoa(long id, String nome, String dataNascimento, String logradouro, int numeroEndereco, String cidade, int cep) {
+        this.id = id;
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.logradouro = logradouro;
+        this.numeroEndereco = numeroEndereco;
+        this.cidade = cidade;
+        this.cep = cep;
+    }
 
     public long getId() {
         return id;
